@@ -5,8 +5,10 @@ import { albumRoute } from './Routes/AlbumRoutes.js';
 import { todoRoute } from './Routes/TodoRoutes.js';
 import { photoRoute } from './Routes/PhotoRoutes.js';
 import { commentRoute } from './Routes/CommentRoutes.js';
+import cors from 'cors';
 
 const app = express();
+app.use(cors())
 
 // Default route (home route)
 app.get("/", (req, res) => {
